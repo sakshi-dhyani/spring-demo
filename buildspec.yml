@@ -12,3 +12,5 @@ artifacts:
 files:
 -target/s3-docker-demo.jar
 discard-paths:yes
+
+
