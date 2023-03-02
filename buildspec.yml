@@ -1,19 +1,14 @@
-version: 0.2
+version:0.2
+
 phases:
-  install:
-    runtime-versions:
-      java: 8
-  pre_build:
-    commands:
-    - echo In the pre_build phase...
-  build:
-    commands:
-    - echo Build started on `date`
-    - mvn install
-  post_build:
-    commands:
-    - echo Build completed on `date`
+build:
+commands:
+-echo Entered the build phase...
+-mvn clean package
+post_build:
+commands:
+-echo Build completed successfully
 artifacts:
-  files:
-  - target/s3-docker-demo.jar
-  - scripts/*
+files:
+-target/s3-docker-demo.jar
+discard-paths:yes
